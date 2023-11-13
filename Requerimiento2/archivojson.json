@@ -1,0 +1,40 @@
+{
+  "PIZZA": {
+    "TAMANO": [
+      {
+        "@id": "Pequeña",
+        "PRECIO_BASE": 5,
+        "DIAMETRO": 24
+      },
+      {
+        "@id": "Mediana",
+        "PRECIO_BASE": 10,
+        "DIAMETRO": 30
+      },
+      {
+        "@id": "Grande",
+        "PRECIO_BASE": 15,
+        "DIAMETRO": 36
+      }
+    ],
+    "EXTRAS": [
+      {
+        "@id": "Queso",
+        "PRECIO": 1.10
+      },
+      {
+        "@id": "Jamón York",
+        "PRECIO": 1.20
+      },
+      {
+        "@id": "Champiñones",
+        "PRECIO": 0.90
+      },
+      {
+        "@id": "Aceitunas negras",
+        "PRECIO": 1.00
+      }
+    ]
+  }
+}
+  

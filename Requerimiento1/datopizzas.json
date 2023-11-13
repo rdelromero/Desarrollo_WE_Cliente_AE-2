@@ -1,0 +1,46 @@
+{
+  "PIZZA": {
+    "CLIENTE": {
+      "Nombre": "Nombre",
+      "Apellido": "Apellido",
+      "Dirección": "Introduzca calle y portal",       
+      "Teléfono": "Introduzca su número",
+      "Correo electrónico": "Introduzca su email"
+    },
+    "TAMANO": [
+      {
+        "@id": "Pequeña",
+        "PRECIO_BASE": 5,
+        "DIAMETRO": 24
+      },
+      {
+        "@id": "Mediana",
+        "PRECIO_BASE": 10,
+        "DIAMETRO": 30
+      },
+      {
+        "@id": "Grande",
+        "PRECIO_BASE": 15,
+        "DIAMETRO": 36
+      }
+    ],
+    "EXTRAS": [
+      {
+        "@id": "Queso",
+        "PRECIO": 1.00
+      },
+      {
+        "@id": "Jamón York",
+        "PRECIO": 1.00
+      },
+      {
+        "@id": "Champiñones",
+        "PRECIO": 1.00
+      },
+      {
+        "@id": "Aceitunas negras",
+        "PRECIO": 1.00
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+body {
+    font-family: Calibri;
+}
+
+fieldset {
+    display: inline-block;
+}
+
+td {
+    padding: 4px;
+}
+
+input[type="text"] {
+    padding: 4px;
+    width: 300px;
+}
+

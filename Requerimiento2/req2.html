@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejemplo AJAX JSON</title>
+    <link rel="stylesheet" href="archivocss.css">
+    <script src="archivojs.js"></script>
+</head>
+<body>
+    <h2>Pedido de Pizza</h2>
+    <form>
+        <fieldset id="FieldsetDatosDeEnvio">
+            <legend>Datos de envío</legend>
+            <!--Creamos una tabla para tener mejor ordenados los datos personales-->
+            <!--Cada celda de la tabla contiene un label o un input-->
+            <table>
+                <tr>
+                    <td><label for="nombre">Nombre y apellido:</label></td>
+                    <td><input type="text" id="nombre" placeholder="Nombre" required></td>
+                    <td><input type="text" id="apellido" placeholder="Apellido" required></td>
+                </tr>
+                <tr>
+                    <td><label for="direccion">Dirección:</label></td>
+                    <td colspan="2"><input type="text" id="direccion" placeholder="Introduce calle y portal" size=45 required></td>
+                </tr>
+                <tr>
+                    <td><label for="telefono">Teléfono:</label></td>
+                    <td colspan="2"><input type="text" id="telefono" placeholder="Introduce tu número" size="45" required></td>
+                </tr>
+                <tr>
+                    <td><label for="dircorele">Correo electrónico:</label></td>
+                    <td colspan="2"><input type="email" id="dircorele" placeholder="Introduce tu email" size="45" required></td>
+                </tr>
+            </table>
+        </fieldset>
+
+
+        <!--Creo una tabla para tener mejor ordenados el botón de conexión y algunas funciones-->
+        <table>
+            <tr>
+                 <td><button id="but1">Establecer conexión con servidor</button></td>
+                <td><button id="but2">Datos de todos los tamaños</button></td>
+                <td><button id="but3">Datos del tamaño seleccionado</button></td>
+            </tr>
+        </table>
+
+        <div id="div1"><!--Div1 a la espera.--></div>
+        <div id="divModal1" class="modal" style="display: none;">
+            <div id="divModalContent1" class="modal-content">
+                <h1>Ventana modal</h1>
+                <p>Conecte con el servidor</p>
+            </div>
+        </div>
+        <div id="divModal2" class="modal" style="display: none;">
+            <div id="divModalContent2" class="modal-content">
+                <h2>Ventana modal</h2>
+                <p>Conecte con el servidor</p>
+            </div>
+        </div>
+        <br>
+        <fieldset id="fieldsetCaracteristicas" style="display: none">
+            <legend>Características de la pizza</legend>
+            Tamaño
+            <!--Tabla con 3 input-label, uno para cada tamaño de pizza-->
+            <table>
+                <tr>
+                    <td><input type="radio" id="radioTamano0" name="tamano"></td>
+                    <td><label for="radioTamano0"><!--json--></label></td>
+                    <td id="tdPrecioTamano0"><!--json--></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="radioTamano1" name="tamano"></td>
+                    <td><label for="radioTamano1"><!--js y json--></label></td>
+                    <td id="tdPrecioTamano1"><!--json--></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="radioTamano2" name="tamano"></td>
+                    <td><label for="radioTamano2"><!--js y json--></label></td>
+                    <td id="tdPrecioTamano2"><!--json--></td>
+                </tr>
+            </table>
+            <br>
+            Extras (elegir al menos uno)
+            <!--Tabla con cuatro checkbox, un checkbox para cada ingrediente extra-->
+            <table>
+                <tr>
+                    <td><input type="checkbox" id="checkboxExtra0" name="ingredientesExtras"></td>
+                    <td><label for="checkboxExtra0"><!--js y json--></label></td>
+                    <td id="tdPrecioExtra0"><!--json--></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="checkboxExtra1" name="ingredientesExtras"></td>
+                    <td><label for="checkboxExtra1"><!--js y json--></label></td>
+                    <td id="tdPrecioExtra1"><!--json--></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="checkboxExtra2" name="ingredientesExtras"></td>
+                    <td><label for="checkboxExtra2"><!--js y json--></label></td>
+                    <td id="tdPrecioExtra2"><!--json--></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="checkboxExtra3" name="ingredientesExtras"></td>
+                    <td><label for="checkboxExtra3"><!--js y json--></label></td>
+                    <td id="tdPrecioExtra3"><!--json--></td>
+                </tr>
+            </table>
+        </fieldset>
+        <br><br>
+        <!--Div con la cantidad de pizzas de ese tamaño y esos ingredientes extra que se van a pedir-->
+        <fieldset id="fieldsetCantidad" style="display: none">
+            <label for="num1">Cantidad ×</label>
+            <input type="number" id="inputnumber1" min=1 max=5 value=1>
+        </fieldset>
+        <br><br>
+        <div id="divProcesarPedido" style="display: none">
+            <button type="button" id="but4">Procesar el pedido</button>
+            <input type="reset" value="Limpiar formulario">
+        </div>
+    </form>
+
+    <!--Div que va a contener el precio del pedido, en principio está oculto-->
+    <div id="divImporte" style="display: none">
+       <table>
+            <tr>
+                <td><p class="negrita">Importe total:</p></td><td><p id="parrafoprecio" class="negrita"></p></td>
+            </tr>
+       </table>
+    </div>
+</body>
+</html>
