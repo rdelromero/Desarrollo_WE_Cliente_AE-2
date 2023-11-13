@@ -1,4 +1,4 @@
-DESARROLLO WEB EN ENTORNO CLIENTE
+Desarrollo web en entorno cliente
 
 # AE-2. AJAX
 
